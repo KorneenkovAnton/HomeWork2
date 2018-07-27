@@ -6,16 +6,16 @@ import java.util.regex.Pattern;
 /**
  * Подсчитать количество содержащихся в данном тексте знаков препинания.
  */
-public class SignCounter {
+public class VariantA {
 
-    private String text;
+    private String string;
 
 
    public int countPunctuationMarks(){
 
        int count = 0;
        Pattern pattern = Pattern.compile("\\p{Punct}");
-       Matcher matcher = pattern.matcher(text);
+       Matcher matcher = pattern.matcher(string);
 
        while (matcher.find()){
            count++;
@@ -24,18 +24,18 @@ public class SignCounter {
        return count;
    }
 
-    public String getText() {
-        return text;
+    public String getString() {
+        return string;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setString(String string) {
+        this.string = string;
     }
 
-    public SignCounter(String text) {
-        this.text = text;
+    public VariantA(String string) {
+        this.string = string;
     }
 
-    public SignCounter() {
+    public VariantA() {
     }
 }

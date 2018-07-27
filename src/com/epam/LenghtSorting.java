@@ -18,7 +18,8 @@ public class LenghtSorting extends ProportionCounter {
             @Override
             public int compare(Word o1, Word o2) {
                 return o1.getWord().length() < o2.getWord().length() ? 1 : o1.getWord().length() > o2.getWord().length()
-                        ? -1 : o1.getProportion() < o2.getProportion() ? -1 : o1.getProportion() > o2.getProportion()
+                        ? -1 : o1.getProportion() * o1.getWord().length() < o2.getProportion() * o2.getWord().length()
+                        ? -1 : o1.getProportion() * o1.getWord().length() > o2.getProportion() * o2.getWord().length()
                         ? 1 : 0;
             }
         });
