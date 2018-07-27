@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Подсчитать количество содержащихся в данном тексте знаков препинания.
  */
-public class VariantA {
+public class SignCounter {
 
     private String string;
 
@@ -32,10 +32,10 @@ public class VariantA {
         this.string = string;
     }
 
-    public VariantA(String string) {
+    public SignCounter(String string) {
         this.string = string;
     }
 
-    public VariantA() {
+    public SignCounter() {
     }
 }

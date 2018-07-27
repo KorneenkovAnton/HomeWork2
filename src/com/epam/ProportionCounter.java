@@ -6,7 +6,7 @@ import java.util.*;
  * Рассортировать слова текста по возрастанию доли гласных букв (отноше-
  * ние количества гласных к общему количеству букв в слове).
  */
-public class VariantB {
+public class ProportionCounter {
 
     private String text = "" ;
     List<Word> words;
@@ -47,12 +47,12 @@ public class VariantB {
 
     }
 
-    public VariantB(String text) {
+    public ProportionCounter(String text) {
         this.text = text;
         this.words = splitText(text);
     }
 
-    public VariantB() {
+    public ProportionCounter() {
         this.words = new ArrayList<>();
     }
 }

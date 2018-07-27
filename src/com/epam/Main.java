@@ -8,24 +8,24 @@ public class Main {
     private static  final String TEST_TEXT = "some TExt, abOut programming? какой-то текст, про, программирвоание!";
 
     public static void main(String[] args) {
-        VariantA variantA = new VariantA(TEST_TEXT);
-        System.out.println("Count of punctuation: " + variantA.countPunctuationMarks());
+        SignCounter signCounter = new SignCounter(TEST_TEXT);
+        System.out.println("Count of punctuation: " + signCounter.countPunctuationMarks());
 
 
-        VariantB variantB = new VariantB();
-        variantB.setText(TEST_TEXT);
-        variantB.sortWords();
+        ProportionCounter proportionCounter = new ProportionCounter();
+        proportionCounter.setText(TEST_TEXT);
+        proportionCounter.sortWords();
 
-        for (Word word : variantB.getWords()){
+        for (Word word : proportionCounter.getWords()){
             System.out.printf("Word: " + word.getWord() + " Proportion: %.2f \n",word.getProportion());
         }
 
 
-        VariantC variantC = new VariantC();
-        variantC.setText(TEST_TEXT);
-        variantC.sortWords();
+        LenghtSorting lenghtSorting = new LenghtSorting();
+        lenghtSorting.setText(TEST_TEXT);
+        lenghtSorting.sortWords();
 
-        for (Word word : variantC.getWords()){
+        for (Word word : lenghtSorting.getWords()){
             System.out.println(word.getWord());
         }
 
