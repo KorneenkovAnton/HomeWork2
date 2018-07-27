@@ -5,7 +5,7 @@ package com.epam;
 
 public class Main {
 
-    private static  final String TEST_TEXT = "some TExt, abOut programming? какой-то текст, про, программирвоание!";
+    private static  final String TEST_TEXT = "sOmE TExt, abOut programming? какOй-то текст, про, программирвоание!";
 
     public static void main(String[] args) {
         SignCounter signCounter = new SignCounter(TEST_TEXT);

@@ -8,14 +8,14 @@ import java.util.regex.Pattern;
  */
 public class SignCounter {
 
-    private String string;
+    private String text;
 
 
    public int countPunctuationMarks(){
 
        int count = 0;
        Pattern pattern = Pattern.compile("\\p{Punct}");
-       Matcher matcher = pattern.matcher(string);
+       Matcher matcher = pattern.matcher(text);
 
        while (matcher.find()){
            count++;
@@ -24,16 +24,16 @@ public class SignCounter {
        return count;
    }
 
-    public String getString() {
-        return string;
+    public String getText() {
+        return text;
     }
 
-    public void setString(String string) {
-        this.string = string;
+    public void setText(String text) {
+        this.text = text;
     }
 
-    public SignCounter(String string) {
-        this.string = string;
+    public SignCounter(String text) {
+        this.text = text;
     }
 
     public SignCounter() {
